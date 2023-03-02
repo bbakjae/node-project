@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Board Detail Page</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f2f2f2;
+            }
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
+            h1 {
+                margin: 0;
+                font-size: 28px;
+            }
+            .container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #fff;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            }
+            .board-image {
+                max-width: 100%;
+                display: block;
+                margin-bottom: 20px;
+            }
+            .board-description {
+                font-size: 18px;
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+            .back-link {
+                display: block;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .back-link a {
+                color: #333;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .btn-update {
+                background-color: #fff;
+                padding: 10px;
+                margin-bottom: 10px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                margin-left: 70%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            .btn-delete {
+                background-color: #fff;
+                padding: 10px;
+                margin-bottom: 10px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                margin-left: 80%;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Board Detail Page</h1>
+        </header>
+        <div class="container">
+            <img src="{{image_url}}" alt="Board Image" class="board-image">
+            <a class="btn-update" href="/board_update?id={{id}}">수정</a>
+            <a class="btn-delete" href="/board_delete?id={{id}}">삭제</a>
+            <h1>{{title}}</h1>
+            <p class="board-description">{{content}}</p>
+            <a href="board" class="back-link">Back to Board List</a>
+        </div>
+    </body>
+</html>
